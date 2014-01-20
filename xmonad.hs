@@ -19,6 +19,9 @@ main = do
             ppOutput = hPutStrLn xmproc
             , ppTitle = xmobarColor "green" "" . shorten 50
         }
+        ,
+        layoutHook = avoidStruts  $  layoutHook defaultConfig
+
 
 
     }
